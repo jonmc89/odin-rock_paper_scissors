@@ -39,23 +39,8 @@ function playGame() {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
     const result = playRound(humanChoice, computerChoice);
-
-    console.log(`Round ${i + 1}`);
-    console.log(`You chose: ${humanChoice}`);
-    console.log(`Computer chose: ${computerChoice}`);
-    console.log(result);
-    console.log(`Human Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-    console.log("-------------------------");
   }
 
-  if (humanScore > computerScore) {
-    console.log("Congratulations! You won the game!");
-  } else if (humanScore < computerScore) {
-    console.log("Sorry, you lost the game.");
-  } else {
-    console.log("The game is a tie!");
-  }
 }
 
 playGame();
