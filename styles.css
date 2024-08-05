@@ -21,6 +21,12 @@
   margin-bottom: 20px;
 }
 
+.choices button{
+  padding: 10px;
+  width: 100px;
+  margin: 0 10px;
+}
+
 .score_container{
   width: 400px;
   height: auto;

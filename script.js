@@ -1,4 +1,4 @@
-/*let humanScore = 0;
+let humanScore = 0;
 let computerScore = 0;
 
 function getComputerChoice() {
@@ -13,10 +13,11 @@ function getComputerChoice() {
   }
 }
 
-function getHumanChoice() {
-  let humanChoice = prompt("Choose rock, paper or scissors?");
-  return humanChoice.toLowerCase();
-}
+let rockChoice = document.getElementById("rock");
+let paperChoice = document.getElementById("paper");
+let scissorsChoice = document.getElementById("scissors");
+
+function getHumanChoice() {}
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
