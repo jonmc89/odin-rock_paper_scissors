@@ -1,42 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="container">
-    <h1 class="game_title">RPS</h1>
-    <div class="choices">
-      <button id="rock">Rock</button>
-      <button id="paper">Paper</button>
-      <button id="scissors">Scissors</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="game_title">RPS</h1>
+      <div class="choices">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+      <div class="score_container">
+        <div class="score_cards">
+          <p id="player_score_cards" class="player_score_cards"></p>
+        </div>
+        <div id="round_score_cards" class="round_score_cards">
+          <p></p>
+        </div>
+        <div id="computer_score_cards" class="computer_score_cards">
+          <p class="score"></p>
+        </div>
+      </div>
+      <div class="messages">
+        <div class="user_message">
+          <p id="user_message"></p>
+        </div>
+        <div class="computer_message">
+          <p id="computer_text"></p>
+        </div>
+        <div class="round_message">
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
     </div>
-    <div class="score_container">
-      <div class="score_cards">
-        <p class="score">0</p>
-      </div>
-      <div class="score_cards">
-        <p>1</p>
-      </div>
-      <div class="score_cards">
-        <p class="score">0</p>
-      </div>
-    </div>
-    <div class="messages">
-      <div class="user_message">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="computer_message">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="round_message">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

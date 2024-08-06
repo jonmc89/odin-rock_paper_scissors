@@ -1,6 +1,15 @@
+//Scoring numbers
 let humanScore = 0;
 let computerScore = 0;
+let roundCounter = 0;
 
+document.getElementById("player_score_cards").innerHTML = humanScore;
+document.getElementById("computer_score_cards").innerHTML = computerScore;
+document.getElementById("round_score_cards").innerHTML = roundCounter;
+
+document.getElementById("computer_text").innerHTML = "Awaiting user choice!";
+
+// Computer choice logic
 function getComputerChoice() {
   let computerChoice = Math.floor(Math.random() * 3 + 1);
   switch (computerChoice) {
@@ -13,12 +22,28 @@ function getComputerChoice() {
   }
 }
 
-let rockChoice = document.getElementById("rock");
-let paperChoice = document.getElementById("paper");
-let scissorsChoice = document.getElementById("scissors");
+let userRockChoice = "rock";
+let userPaperChoice = "paper";
+let userScissorsChoice = "scissors";
 
-function getHumanChoice() {}
+// Stores answer in a variable, based on the button clicked. Then displays text in user message box.
+document.getElementById("rock").addEventListener("click", function () {
+  humanChoice = "rock";
+  document.getElementById("user_message").innerHTML =
+    "You chose " + humanChoice + "!";
+});
+document.getElementById("paper").addEventListener("click", function () {
+  humanChoice = "paper";
+  document.getElementById("user_message").innerHTML =
+    "You chose " + humanChoice + "!";
+});
+document.getElementById("scissors").addEventListener("click", function () {
+  humanChoice = "scissors";
+  document.getElementById("user_message").innerHTML =
+    "You chose " + humanChoice + "!";
+});
 
+//Play round logic
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice) {
     return "You Tied";
@@ -35,28 +60,4 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    const humanChoice = getHumanChoice();
-    const computerChoice = getComputerChoice();
-    const result = playRound(humanChoice, computerChoice);
-
-    console.log(`Round ${i + 1}`);
-    console.log(`You chose: ${humanChoice}`);
-    console.log(`Computer chose: ${computerChoice}`);
-    console.log(result);
-    console.log(`Human Score: ${humanScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-    console.log("-------------------------");
-  }
-
-  if (humanScore > computerScore) {
-    console.log("Congratulations! You won the game!");
-  } else if (humanScore < computerScore) {
-    console.log("Sorry, you lost the game.");
-  } else {
-    console.log("The game is a tie!");
-  }
-}
-
-playGame();
+getComputerChoice();
