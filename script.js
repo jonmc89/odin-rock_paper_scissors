@@ -72,4 +72,10 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-console.l;
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(humanChoice, computerChoice);
+  }
+}
+
+playGame();
